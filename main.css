@@ -1,11 +1,13 @@
 /*
-OBJECTIVE: Create a single price landing page with 
+OBJECTIVE: Create a single page subscription page with HTML CSS based off a photoshop design. 
 */
 
+/* Base / Core Styles */
 * {
   box-sizing: border-box;
 }
 
+/*--- Custom color variable used to reuse ---*/
 :root {
   --light-blue: hsl(179, 47%, 52%);
   --dark-blue: hsl(179, 61%, 44%);
@@ -38,11 +40,17 @@ ul {
   padding: 0;
 }
 
+/* <Main> */
+/* =========================== */
+
 .main-container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: minmax(min-content, max-content);
 }
+
+/* Sections */
+/* ============================ */
 
 .section-join,
 .section-subscription,
@@ -127,6 +135,9 @@ ul {
   padding: 0.25em 0;
 }
 
+/* Footer */
+/* ======================== */
+
 .attribution {
   background: #333;
   color: #fff;
@@ -137,9 +148,10 @@ ul {
   color: #fff;
 }
 
-/*================================== 
+/*=========================================================== 
 Media Queries
-====================================*/
+++ anything wider that a mobile phone held in portrait view
+==============================================================*/
 
 @media (min-width: 375px) {
   body {
