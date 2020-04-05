@@ -1,0 +1,211 @@
+/*
+OBJECTIVE: Create a single price landing page with 
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --light-blue: hsl(179, 47%, 52%);
+  --dark-blue: hsl(179, 61%, 44%);
+  --cyan: hsl(179, 62%, 43%);
+  --dark-grey: #666;
+  --light-grey: hsl(204, 43%, 93%);
+  --yellow-green: hsl(71, 73%, 54%);
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto, 1fr);
+  font-family: Karla;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(min-content, max-content);
+}
+
+.section-join,
+.section-subscription,
+.section-why {
+  padding: 2em;
+}
+
+.section-header {
+  font-size: 1.25em;
+}
+
+.section-join {
+  background: #fff;
+}
+
+.section-join .section-header {
+  color: var(--light-blue);
+}
+
+.section-guarantee {
+  color: var(--yellow-green);
+  font-size: 1.025em;
+}
+
+.section-join .section-message {
+  color: var(--dark-grey);
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.section-subscription {
+  align-self: center;
+  color: #fff;
+  background: hsl(179, 61%, 44%);
+}
+
+.section-subscription .section-header {
+  font-size: 1.25em;
+}
+
+.section-subscription .subscription-price {
+  color: #fff;
+  font-size: 2em;
+  margin-right: 0.25em;
+}
+
+.section-subscription p:nth-child(2) {
+  color: #f2f3f4;
+}
+
+.subscription-cta {
+  background-color: var(--yellow-green);
+  -webkit-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.75);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-family: Karla;
+  font-size: 1.025em;
+  font-weight: 700;
+  padding: 1em;
+  margin-top: 1em;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.section-why {
+  background: hsl(179, 47%, 52%);
+  color: #fff;
+}
+
+.section-why .section-header {
+  font-size: 1.25em;
+}
+
+.section-why-list-item {
+  color: #f2f3f4;
+  padding: 0.25em 0;
+}
+
+.attribution {
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.attribution a {
+  color: #fff;
+}
+
+/*================================== 
+Media Queries
+====================================*/
+
+@media (min-width: 375px) {
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-container {
+    -webkit-box-shadow: 0px 15px 40px 5px rgba(219, 219, 219, 1);
+    -moz-box-shadow: 0px 15px 40px 5px rgba(219, 219, 219, 1);
+    box-shadow: 0px 15px 40px 5px rgba(219, 219, 219, 1);
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(min-content, max-content);
+    justify-content: center;
+    align-items: center;
+    max-width: 649px;
+  }
+
+  .section-join {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .section-subscription {
+    border-bottom-left-radius: 5px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: stretch;
+  }
+
+  .subscription-cta {
+    margin-top: 2em;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .subscription-cta:hover {
+    transform: scale(1.025);
+  }
+
+  .section-why {
+    border-bottom-right-radius: 5px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .section-why-list-item:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .attribution {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+  }
+}
