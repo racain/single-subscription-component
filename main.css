@@ -1,5 +1,5 @@
 /*
-OBJECTIVE: Create a single page subscription page with HTML CSS based off a photoshop design. 
+OBJECTIVE: Create a single subscription component with HTML CSS based off a sketch design. 
 */
 
 /* Base / Core Styles */
@@ -12,9 +12,11 @@ OBJECTIVE: Create a single page subscription page with HTML CSS based off a phot
   --light-blue: hsl(179, 47%, 52%);
   --dark-blue: hsl(179, 61%, 44%);
   --cyan: hsl(179, 62%, 43%);
-  --dark-grey: #666;
   --light-grey: hsl(204, 43%, 93%);
   --yellow-green: hsl(71, 73%, 54%);
+  --dark-grey: #666;
+  --white: #fff;
+  --off-white: #f2f3f4;
 }
 
 body,
@@ -66,7 +68,7 @@ ul {
 }
 
 .section-join {
-  background: #fff;
+  background: var(--white);
 }
 
 .section-join .section-header {
@@ -86,8 +88,8 @@ ul {
 
 .section-subscription {
   align-self: center;
-  color: #fff;
-  background: hsl(179, 61%, 44%);
+  color: var(--white);
+  background: var(--dark-blue);
 }
 
 .section-subscription .section-header {
@@ -95,13 +97,13 @@ ul {
 }
 
 .section-subscription .subscription-price {
-  color: #fff;
+  color: var(--white);
   font-size: 2em;
   margin-right: 0.25em;
 }
 
 .section-subscription p:nth-child(2) {
-  color: #f2f3f4;
+  color: var(--off-white);
 }
 
 .subscription-cta {
@@ -111,7 +113,7 @@ ul {
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.75);
   border: 0;
   border-radius: 5px;
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
   display: block;
   font-family: Karla;
@@ -125,8 +127,8 @@ ul {
 }
 
 .section-why {
-  background: hsl(179, 47%, 52%);
-  color: #fff;
+  background: var(--light-blue);
+  color: var(--white);
 }
 
 .section-why .section-header {
@@ -134,7 +136,7 @@ ul {
 }
 
 .section-why-list-item {
-  color: #f2f3f4;
+  color: var(--off-white);
   padding: 0.25em 0;
 }
 
@@ -142,13 +144,13 @@ ul {
 /* ======================== */
 
 .attribution {
-  background: #333;
-  color: #fff;
+  background: var(--dark-grey);
+  color: var(--white);
   text-align: center;
 }
 
 .attribution a {
-  color: #fff;
+  color: var(--white);
 }
 
 /*=========================================================== 
@@ -231,7 +233,7 @@ Media Queries
 
   .attribution {
     background: #333;
-    color: #fff;
+    color: var(--white);
     text-align: center;
     width: 100%;
     align-self: end;
